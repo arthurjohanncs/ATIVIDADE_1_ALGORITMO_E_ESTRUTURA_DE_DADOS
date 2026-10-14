@@ -52,3 +52,61 @@ int main() {
                 }
             }
         }
+
+        //UPDATE
+        else if (opcao == 3) {
+            if (quantidade == 0) {
+                printf("Nenhuma nota para atualizar.\n");
+            } else {
+                printf("Digite a posicao da nota (0 ate %d): ",
+                       quantidade - 1);
+                scanf("%d", &posicao);
+
+                if (posicao >= 0 && posicao < quantidade) {
+                    printf("Digite a nova nota: ");
+                    scanf("%d", &nota);
+
+                    notas[posicao] = nota;
+
+                    printf("Nota atualizada!\n");
+                } else {
+                    printf("Posicao invalida!\n");
+                }
+            }
+        }
+
+        //DELETE
+        else if (opcao == 4) {
+            if (quantidade == 0) {
+                printf("Nenhuma nota para deletar.\n");
+            } else {
+                printf("Digite a posicao da nota (0 ate %d): ",
+                       quantidade - 1);
+                scanf("%d", &posicao);
+
+                if (posicao >= 0 && posicao < quantidade) {
+
+                    for (i = posicao; i < quantidade - 1; i++) {
+                        notas[i] = notas[i + 1];
+                    }
+
+                    quantidade--;
+
+                    printf("Nota deletada!\n");
+                } else {
+                    printf("Posicao invalida!\n");
+                }
+            }
+        }
+
+        //Sair
+        else if (opcao == 5) {
+            printf("Encerrando o programa...\n");
+        }
+        else {
+            printf("Opcao invalida! Escolha de 1 a 5.\n");
+        }
+    }
+
+    return 0;
+}
