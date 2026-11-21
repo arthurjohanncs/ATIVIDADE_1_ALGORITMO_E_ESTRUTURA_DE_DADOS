@@ -7,4 +7,7 @@ O programa exibe um menu interativo com as seguintes opções:
 => Listar notas (Read): Exibe todas as notas cadastradas junto com suas respectivas posições.
 => Atualizar nota (Update): Modifica o valor de uma nota existente a partir de sua posição.
 => Deletar nota (Delete): Remove uma nota da lista pelo índice e reorganiza o vetor.
+=> Ver resumo da turma (média, maior e menor).
+=> Situação da turma (aprovados, recuperação e reprovados).
+=> Buscar ocorrências de uma nota específica.
 => Sair: Encerra a execução do programa.
